@@ -15,6 +15,13 @@ const NavBar = () => {
     }
   };
 
+  // function to close tabs when clicked on small devices
+  const handleClose = () => {
+    if (screenWidth < 768) {
+      setOpen(false);
+    }
+  };
+
   useEffect(() => {
     trackScreenWidth();
     window.addEventListener("resize", trackScreenWidth);
@@ -56,6 +63,7 @@ const NavBar = () => {
             <ul style={{ left: open ? "0" : "-100vw" }}>
               <li>
                 <Link
+                  onClick={handleClose}
                   style={{ color: location.pathname === "/" && "#4071f4" }}
                   to="/"
                 >
@@ -64,6 +72,7 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
+                  onClick={handleClose}
                   style={{ color: location.pathname === "/about" && "#4071f4" }}
                   to="/about"
                 >
@@ -72,6 +81,7 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
+                  onClick={handleClose}
                   style={{
                     color: location.pathname === "/skills" && "#4071f4",
                   }}
@@ -82,6 +92,7 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
+                  onClick={handleClose}
                   style={{ color: location.pathname === "/works" && "#4071f4" }}
                   to="/works"
                 >
@@ -90,6 +101,7 @@ const NavBar = () => {
               </li>
               <li>
                 <Link
+                  onClick={handleClose}
                   style={{
                     color: location.pathname === "/contact" && "#4071f4",
                   }}
