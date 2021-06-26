@@ -10,6 +10,10 @@ footer i {
 footer a {
   font-size: 39px;
 }
+
+footer a:hover {
+  font-size: 42px;
+}
 footer i:not(:last-child) {
   margin-right: 10px;
 }

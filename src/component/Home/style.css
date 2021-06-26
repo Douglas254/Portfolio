@@ -29,6 +29,12 @@
   font-family: "Righteous", cursive;
 }
 
+.home .title button:hover {
+  background-color: transparent;
+  color: #3f71f4;
+  border: 1px solid black;
+}
+
 .home .person {
   width: 100%;
   margin-top: 20px;
@@ -37,6 +43,7 @@
 .home .person img {
   width: 80%;
   border-radius: 50px;
+  box-shadow: 6px 6px rgb(88, 61, 61);
 }
 
 @media (min-width: 768px) {

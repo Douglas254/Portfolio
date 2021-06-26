@@ -9,11 +9,19 @@
 .content {
   display: grid;
   font-size: 24px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .content div {
-  margin: 0 3px 25px 0;
+  margin: 25px;
+  box-shadow: 6px 6px 6px 6px rgb(221, 221, 221);
+  padding: 30px;
+}
+
+.content div:hover {
+  margin: 25px;
+  box-shadow: 6px 6px rgb(199, 199, 218);
+  padding: 30px;
 }
 
 .content strong {
@@ -27,6 +35,24 @@
 }
 
 @media (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content div {
+    margin: 25px;
+    box-shadow: 6px 6px 6px 6px rgb(221, 221, 221);
+    padding: 30px;
+  }
+
+  .content div:hover {
+    margin: 25px;
+    box-shadow: 6px 6px rgb(199, 199, 218);
+    padding: 30px;
+  }
+}
+
+@media (min-width: 990px) {
   .content {
     grid-template-columns: 1fr 1fr 1fr;
   }
